@@ -37,38 +37,38 @@ const COLS = ['id', 'title', 'subtitle', 'url', 'city', 'country', 'location', '
 
 
 const writePlace = (place) => {
-    const sqlValues = {}
-    COLS.forEach(c => {
-        sqlValues[c] = `'${place[c]}'`
-        if (typeof place[c] === 'string')  {
-            sqlValues[c] = `'${place[c].replace(/'/gi, '\'\'')}'`
-        }
-    })
+  const sqlValues = {}
+  COLS.forEach(c => {
+    sqlValues[c] = `'${place[c]}'`
+    if (typeof place[c] === 'string')  {
+      sqlValues[c] = `'${place[c].replace(/'/gi, '\'\'')}'`
+    }
+  })
 
-    sqlValues.latitude = place.coordinates.lat
-    sqlValues.longitude = place.coordinates.lng
-    const sql = `INSERT INTO places (${Object.keys(sqlValues).join(', ')}) VALUES (${Object.values(sqlValues).join(', ')})`
-    db.run(sql, [], (e) => {
-        if (e) {
-            console.log(sql)
-            console.log(e, this)
-        }
-    })
+  sqlValues.latitude = place.coordinates.lat
+  sqlValues.longitude = place.coordinates.lng
+  const sql = `INSERT INTO places (${Object.keys(sqlValues).join(', ')}) VALUES (${Object.values(sqlValues).join(', ')})`
+  db.run(sql, [], (e) => {
+    if (e) {
+      console.log(sql)
+      console.log(e, this)
+    }
+  })
 }
 
 const fetchPlace = (i) => {
-    fetch(`https://www.atlasobscura.com/places/${i}.json`)
-        .then(response => response.json())
-        .catch(() => {
-            console.warn(`failed to load ${i}`)
-        })
-        .then(data => {
-            if (data !== undefined) {
-                console.warn(`success loading ${i}`)
-                writePlace(data)
-                fs.writeFileSync(`data/places/${i}.json`, JSON.stringify(data))
-            }
-        })
+  fetch(`https://www.atlasobscura.com/places/${i}.json`)
+    .then(response => response.json())
+    .catch(() => {
+      console.warn(`failed to load ${i}`)
+    })
+    .then(data => {
+      if (data !== undefined) {
+        console.warn(`success loading ${i}`)
+        writePlace(data)
+        fs.writeFileSync(`data/places/${i}.json`, JSON.stringify(data))
+      }
+    })
 }
 
 
@@ -76,10 +76,10 @@ let i = 25183
 const MAX = 50000
 
 const interval = setInterval(() => {
-    if (i >= MAX) {
-        clearInterval(interval)
-    }
-    fetchPlace(i)
-    i++
+  if (i >= MAX) {
+    clearInterval(interval)
+  }
+  fetchPlace(i)
+  i++
 }, 1000)
 
