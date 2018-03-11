@@ -1,15 +1,24 @@
+import DEFAULT_MAP_STYLE from './style.json'
+
 const initialState = {
-  resort : null,
+  style: DEFAULT_MAP_STYLE,
+  countryHover: null
 }
 
-export const SOME_ACTION = 'SOME_ACTION'
+export const COUNTRY_HOVER = 'COUNTRY_HOVER'
 
 export default function(state = initialState, action) {
   switch (action.type) {
-  case SOME_ACTION : {
+  case COUNTRY_HOVER : {
+    const style = {...state.style}
+    style.layers.find(layer => layer.id === 'countries-select').filter = [
+      '==',
+      'NAME',
+      action.feature.properties.NAME
+    ]
     return {
       ...state,
-      thing : action.payload,
+      style,
     }
   }
   default:

@@ -19,7 +19,7 @@ const store = createStore(
   reducers,
   applyMiddleware(thunk)
 )
-store.dispatch(init())
+// store.dispatch(init())
 
 render(
   <Provider store={store}>

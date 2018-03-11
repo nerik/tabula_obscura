@@ -1,0 +1,223 @@
+{
+    "version": 8,
+    "name": "Tabula Obscura NE Robinson",
+    "metadata": {
+        "mapbox:autocomposite": true,
+        "mapbox:type": "template"
+    },
+    "center": [
+        26.984645015596698,
+        49.63067022573318
+    ],
+    "zoom": 3.0817684659991724,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "composite": {
+            "url": "mapbox://nerik.5slpktlq,nerik.38k8ogjc,nerik.5nvgq3u7,nerik.3mqthmcg,nerik.44nee0pv,nerik.8pq4ktor,nerik.68xpy1ra,nerik.dmdsxfx9",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/nerik/cjemnhij034mf2sokzuj11ab3",
+    "glyphs": "mapbox://fonts/nerik/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "paint": {
+                "background-color": "hsl(201, 63%, 76%)"
+            }
+        },
+        {
+            "id": "ne-10m-graticules-5-2s383b",
+            "type": "line",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "ne_10m_graticules_5-2s383b",
+            "layout": {},
+            "paint": {
+                "line-color": "hsl(0, 1%, 100%)",
+                "line-width": 0.3
+            }
+        },
+        {
+            "id": "ne-10m-graticules-20-72t16y",
+            "type": "line",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "ne_10m_graticules_20-72t16y",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "hsl(0, 0%, 100%)",
+                "line-width": 0.7
+            }
+        },
+        {
+            "id": "countries-robinson-cmby81",
+            "type": "fill",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "countries_robinson-cmby81",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "#FCFCFA"
+            }
+        },
+        {
+            "id": "countries-robinson-cmby81 (1)",
+            "type": "fill",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "countries_robinson-cmby81",
+            "filter": [
+                "==",
+                "name",
+                "France"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "#C9B390"
+            }
+        },
+        {
+            "id": "ne-10m-urban-areas-cf8p9d",
+            "type": "fill",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "ne_10m_urban_areas-cf8p9d",
+            "layout": {
+                "visibility": "none"
+            },
+            "paint": {
+                "fill-color": "hsla(0, 0%, 0%, 0.1)"
+            }
+        },
+        {
+            "id": "ne-10m-roads-306p7v",
+            "type": "line",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "ne_10m_roads-306p7v",
+            "layout": {
+                "visibility": "none"
+            },
+            "paint": {
+                "line-color": "hsl(111, 84%, 64%)"
+            }
+        },
+        {
+            "id": "rivers-robinson-72xa8f",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "rivers-robinson-72xa8f",
+            "layout": {
+                "visibility": "none"
+            },
+            "paint": {
+                "line-color": "hsl(244, 91%, 56%)"
+            }
+        },
+        {
+            "id": "obscura-places-robinson-2g7efb",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "obscura_places_robinson-2g7efb",
+            "filter": [
+                ">",
+                "want_to_visit",
+                500
+            ],
+            "layout": {
+                "text-field": "{title}",
+                "text-font": [
+                    "Platform Web Regular Italic",
+                    "Arial Unicode MS Regular"
+                ],
+                "icon-image": "marker-11",
+                "text-anchor": "top",
+                "text-size": 14,
+                "text-offset": [
+                    0,
+                    0.7
+                ]
+            },
+            "paint": {
+                "text-color": "#362C16"
+            }
+        },
+        {
+            "id": "populated-places-robinson-d9741a",
+            "type": "symbol",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "populated-places-robinson-d9741a",
+            "layout": {
+                "icon-image": "star-11",
+                "icon-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            3,
+                            0.7
+                        ],
+                        [
+                            6,
+                            1
+                        ]
+                    ]
+                },
+                "text-field": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            ""
+                        ],
+                        [
+                            3,
+                            "{NAME}"
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Platform Web Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-transform": "uppercase",
+                "text-anchor": "bottom",
+                "text-size": 11
+            },
+            "paint": {
+                "text-halo-color": "#FCFCFA",
+                "text-halo-width": 1
+            }
+        },
+        {
+            "id": "countries-robinson-cmby81 (2)",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "countries_robinson-cmby81",
+            "layout": {},
+            "paint": {
+                "fill-color": "hsla(0, 0%, 0%, 0)",
+                "fill-outline-color": "hsla(0, 0%, 0%, 0.38)"
+            }
+        }
+    ],
+    "created": "2018-03-11T10:22:54.740Z",
+    "id": "cjemnhij034mf2sokzuj11ab3",
+    "modified": "2018-03-11T14:25:40.603Z",
+    "owner": "nerik",
+    "visibility": "private",
+    "draft": false
+}

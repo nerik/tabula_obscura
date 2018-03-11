@@ -1,12 +1,9 @@
 import {
-  SOME_ACTION
+  COUNTRY_HOVER
 } from './reducer'
 
-export function init() {
-  return (dispatch) => {
-    dispatch({
-      type : SOME_ACTION,
-      payload : 'blah'
-    })
-  }
-}
+
+export const countryHover = feature => ({
+  type : COUNTRY_HOVER,
+  feature
+})

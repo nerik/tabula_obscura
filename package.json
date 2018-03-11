@@ -24,7 +24,9 @@
     "lint-css": "node_modules/stylelint/dist/cli.js 'src/**/*.css'",
     "lint-fix": "eslint --fix",
     "dev": "webpack-dev-server --config ./config/webpack.dev.js --progress --hot --port 3003",
-    "build": "webpack -p --config ./config/webpack.prod.js"
+    "build": "webpack -p --config ./config/webpack.prod.js",
+    "neToGeoJSON": "mapshaper data/ne/*.shp -o data/ne_geojson format=geojson",
+    "neToRobinson": "./scripts/toRobinson.sh"
   },
   "author": "",
   "license": "ISC",
@@ -39,10 +41,12 @@
     "babel-preset-react": "^6.24.1",
     "cheerio": "^1.0.0-rc.2",
     "css-loader": "^0.28.10",
+    "dirty-reprojectors": "^0.0.1",
     "dotenv": "^5.0.1",
     "eslint": "^4.16.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
+    "mapshaper": "^0.4.63",
     "node-fetch": "^1.7.3",
     "sqlite3": "^3.1.13",
     "style-loader": "^0.20.3",
@@ -52,6 +56,7 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
+    "@turf/turf": "^5.1.6",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-map-gl": "^3.2.4",

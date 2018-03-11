@@ -1,0 +1,410 @@
+{
+    "version": 8,
+    "name": "Tabula Obscura NE Robinson",
+    "metadata": {
+        "mapbox:autocomposite": true,
+        "mapbox:type": "template",
+        "mapbox:groups": {
+            "5582e33fffb10c7fb97f93ddeab8bde0": {
+                "name": "Group"
+            }
+        }
+    },
+    "center": [
+        2.9444234060247254,
+        52.755291792937385
+    ],
+    "zoom": 3.414159758756939,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "composite": {
+            "url": "mapbox://nerik.68xpy1ra,nerik.3mqthmcg,nerik.7gb7cqjx,nerik.44nee0pv,nerik.5nvgq3u7,nerik.8pq4ktor,nerik.dmdsxfx9,nerik.38k8ogjc",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/nerik/cjemnhij034mf2sokzuj11ab3",
+    "glyphs": "mapbox://fonts/nerik/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "paint": {
+                "background-color": "hsl(201, 63%, 76%)"
+            }
+        },
+        {
+            "id": "ne-10m-graticules-5-2s383b",
+            "type": "line",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "ne_10m_graticules_5-2s383b",
+            "layout": {},
+            "paint": {
+                "line-color": "hsl(0, 1%, 100%)",
+                "line-width": 0.3
+            }
+        },
+        {
+            "id": "ne-10m-graticules-20-72t16y",
+            "type": "line",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "ne_10m_graticules_20-72t16y",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "hsl(0, 0%, 100%)",
+                "line-width": 0.7
+            }
+        },
+        {
+            "id": "c13",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "5582e33fffb10c7fb97f93ddeab8bde0"
+            },
+            "source": "composite",
+            "source-layer": "ne_50m_admin_0_countries_robi-d68qjc",
+            "layout": {},
+            "paint": {
+                "line-color": "hsla(41, 42%, 15%, 1)",
+                "line-width": 25
+            }
+        },
+        {
+            "id": "c13o",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "5582e33fffb10c7fb97f93ddeab8bde0"
+            },
+            "source": "composite",
+            "source-layer": "ne_50m_admin_0_countries_robi-d68qjc",
+            "layout": {},
+            "paint": {
+                "line-color": "hsl(201, 63%, 76%)",
+                "line-width": 24.8
+            }
+        },
+        {
+            "id": "c13 copy",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "5582e33fffb10c7fb97f93ddeab8bde0"
+            },
+            "source": "composite",
+            "source-layer": "ne_50m_admin_0_countries_robi-d68qjc",
+            "layout": {},
+            "paint": {
+                "line-color": "hsla(41, 42%, 15%, 1)",
+                "line-width": 16
+            }
+        },
+        {
+            "id": "c13o copy",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "5582e33fffb10c7fb97f93ddeab8bde0"
+            },
+            "source": "composite",
+            "source-layer": "ne_50m_admin_0_countries_robi-d68qjc",
+            "layout": {},
+            "paint": {
+                "line-color": "hsl(201, 63%, 76%)",
+                "line-width": 15.6
+            }
+        },
+        {
+            "id": "c8",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "5582e33fffb10c7fb97f93ddeab8bde0"
+            },
+            "source": "composite",
+            "source-layer": "ne_50m_admin_0_countries_robi-d68qjc",
+            "layout": {},
+            "paint": {
+                "line-color": "hsla(41, 42%, 15%, 1)",
+                "line-width": 9
+            }
+        },
+        {
+            "id": "c8o",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "5582e33fffb10c7fb97f93ddeab8bde0"
+            },
+            "source": "composite",
+            "source-layer": "ne_50m_admin_0_countries_robi-d68qjc",
+            "layout": {},
+            "paint": {
+                "line-color": "hsl(201, 63%, 76%)",
+                "line-width": 8.2
+            }
+        },
+        {
+            "id": "c5",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "5582e33fffb10c7fb97f93ddeab8bde0"
+            },
+            "source": "composite",
+            "source-layer": "ne_50m_admin_0_countries_robi-d68qjc",
+            "layout": {},
+            "paint": {
+                "line-color": "hsla(41, 42%, 15%, 1)",
+                "line-width": 4
+            }
+        },
+        {
+            "id": "c5o",
+            "type": "line",
+            "metadata": {
+                "mapbox:group": "5582e33fffb10c7fb97f93ddeab8bde0"
+            },
+            "source": "composite",
+            "source-layer": "ne_50m_admin_0_countries_robi-d68qjc",
+            "layout": {},
+            "paint": {
+                "line-color": "hsl(201, 63%, 76%)",
+                "line-width": 3
+            }
+        },
+        {
+            "id": "countries",
+            "type": "fill",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "ne_50m_admin_0_countries_robi-d68qjc",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "#FCFCFA"
+            },
+            "interactive": true
+        },
+        {
+            "id": "countries-select",
+            "type": "fill",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "ne_50m_admin_0_countries_robi-d68qjc",
+            "filter": [
+                "==",
+                "NAME",
+                "France"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "#C9B390",
+                "fill-outline-color": "hsla(41, 42%, 15%, 0.49)"
+            }
+        },
+        {
+            "id": "ne-10m-urban-areas-cf8p9d",
+            "type": "fill",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "ne_10m_urban_areas-cf8p9d",
+            "layout": {
+                "visibility": "none"
+            },
+            "paint": {
+                "fill-color": "hsla(0, 0%, 0%, 0.1)"
+            }
+        },
+        {
+            "id": "rivers",
+            "type": "line",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "rivers-robinson-72xa8f",
+            "layout": {},
+            "paint": {
+                "line-color": "hsl(201, 63%, 76%)",
+                "line-width": 2,
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            6,
+                            0
+                        ],
+                        [
+                            8,
+                            1
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "roads",
+            "type": "line",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "ne_10m_roads-306p7v",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-opacity": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            6,
+                            0
+                        ],
+                        [
+                            12,
+                            0.6
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "ne-10m-roads-306p7v",
+            "type": "line",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "ne_10m_roads-306p7v",
+            "layout": {
+                "visibility": "none"
+            },
+            "paint": {
+                "line-color": "hsl(111, 84%, 64%)"
+            }
+        },
+        {
+            "id": "obscura-symbols",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "obscura_places_robinson-2g7efb",
+            "layout": {
+                "text-field": "{title}",
+                "text-font": [
+                    "Platform Web Regular Italic",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-size": 14,
+                "icon-image": "marker-11",
+                "text-anchor": "top"
+            },
+            "paint": {
+                "text-color": "hsla(41, 42%, 15%, 1)",
+                "text-translate": [
+                    0,
+                    8
+                ]
+            }
+        },
+        {
+            "id": "obscura-dots",
+            "type": "circle",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "obscura_places_robinson-2g7efb",
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "circle-color": "hsla(41, 42%, 15%, 1)",
+                "circle-radius": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            5,
+                            0
+                        ],
+                        [
+                            5.1,
+                            2
+                        ],
+                        [
+                            14,
+                            3
+                        ]
+                    ]
+                }
+            }
+        },
+        {
+            "id": "populated-places",
+            "type": "symbol",
+            "metadata": {},
+            "source": "composite",
+            "source-layer": "populated-places-robinson-d9741a",
+            "layout": {
+                "icon-image": "star-11",
+                "icon-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            3,
+                            0.7
+                        ],
+                        [
+                            6,
+                            1
+                        ]
+                    ]
+                },
+                "text-field": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            ""
+                        ],
+                        [
+                            3,
+                            "{NAME}"
+                        ]
+                    ]
+                },
+                "text-font": [
+                    "Platform Web Regular",
+                    "Arial Unicode MS Regular"
+                ],
+                "text-transform": "uppercase",
+                "text-anchor": "bottom",
+                "text-size": {
+                    "base": 1,
+                    "stops": [
+                        [
+                            0,
+                            0
+                        ],
+                        [
+                            3,
+                            11
+                        ],
+                        [
+                            10,
+                            24
+                        ]
+                    ]
+                }
+            },
+            "paint": {
+                "text-halo-color": "#FCFCFA",
+                "text-halo-width": 1
+            }
+        }
+    ],
+    "created": "2018-03-11T10:22:54.740Z",
+    "id": "cjemnhij034mf2sokzuj11ab3",
+    "modified": "2018-03-11T16:16:33.506Z",
+    "owner": "nerik",
+    "visibility": "private",
+    "draft": false
+}
